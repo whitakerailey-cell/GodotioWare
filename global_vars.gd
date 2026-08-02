@@ -1,6 +1,6 @@
 extends Node
 
-var mingames_completed = 0
+var minigames_completed = 0
 var lives = 5
 
 # Called when the node enters the scene tree for the first time.

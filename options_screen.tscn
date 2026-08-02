@@ -15,20 +15,21 @@ texture = ExtResource("1_666cw")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1597197860]
 clip_contents = false
-offset_left = 206.0
-offset_top = 113.0
-offset_right = 914.0
-offset_bottom = 272.0
+offset_left = 237.0
+offset_top = 166.0
+offset_right = 988.0
+offset_bottom = 325.0
 theme_override_colors/font_outline_color = Color(0.5137255, 0.42745098, 0.8980392, 1)
 theme_override_constants/outline_size = 40
-theme_override_font_sizes/normal_font_size = 108
-text = "GodotioWare"
+theme_override_font_sizes/normal_font_size = 49
+text = "Y U wanna mess with settings?
+the dog ate them anyways."
 
 [node name="start2" type="Button" parent="." unique_id=647520088]
-offset_left = 464.0
-offset_top = 280.0
-offset_right = 613.0
-offset_bottom = 324.0
+offset_left = 499.0
+offset_top = 370.0
+offset_right = 648.0
+offset_bottom = 414.0
 theme_override_colors/font_outline_color = Color(0.5137255, 0.42745098, 0.8980392, 1)
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
