@@ -1,9 +1,9 @@
 extends Node2D
-@onready var garlic_container: HBoxContainer = $GarlicContainer
+@onready var garlic_container: HBoxContainer = $SDContainer
 @onready var garlic: TextureRect = $SDContainer/SDCard
 @onready var garlic_2: TextureRect = $SDContainer/SDCard2
 @onready var garlic_3: TextureRect = $SDContainer/SDCard3
-@onready var garlic_4: TextureRect = $GarlicContainer/SDCard4
+@onready var garlic_4: TextureRect = $SDContainer/SDCard4
 @onready var garlic_5: TextureRect = $SDContainer/SDCard5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
@@ -15,7 +15,9 @@ func _ready() -> void:
 	
 	if GlobalVars.minigames_completed < 3: # if you havent completed 3 minigames yet 
 		GlobalVars.minigames_completed = GlobalVars.minigames_completed +1
-		get_tree().change_scene_to_file("res://scenes/minigame_" + str(GlobalVars.minigames_completed) + ".tscn") # changes your scene by arranging this frankenstein path. 
+		get_tree().change_scene_to_file("res://minigame_" + str(GlobalVars.minigames_completed) + ".tscn") # changes your scene by arranging this frankenstein path. 
+	elif GlobalVars.minigames_completed == 0:
+		get_tree().change_scene_to_file("res://minigame_1")
 # Above, your script is being told to go to the next minigame. If the 
 # current minigame is Level 1, then you would be on minigame 1. If you 
 # complete that level, you have the minigames_completed add one, and then you 

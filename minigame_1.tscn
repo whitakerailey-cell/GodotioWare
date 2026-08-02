@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://c3hmpyuele6ul"]
+
+[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_gi7k6"]
+[ext_resource type="PackedScene" uid="uid://bu6tswrxq2kyt" path="res://player.tscn" id="2_0hvi2"]
+[ext_resource type="Texture2D" uid="uid://c46t0n816hn07" path="res://pixil-frame-0.png" id="3_0hvi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6gmb"]
+size = Vector2(39.999992, 40)
+
+[node name="Minigame_1" type="Node2D" unique_id=422965619]
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1455710948]
+position = Vector2(-19, 517)
+scale = Vector2(30.474604, 2.6649754)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1735332113]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=638738543]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_r6gmb")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=919366114]
+position = Vector2(549, 351.00003)
+scale = Vector2(7.011459, 1.8569052)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=340577934]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=852554585]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_r6gmb")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1999533558]
+position = Vector2(71.99999, 236)
+scale = Vector2(6.766654, 2.0704734)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1841043964]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=591187286]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_r6gmb")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=886446020]
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=277780480]
+z_index = -1
+offset_right = 584.0
+offset_bottom = 350.0
+scale = Vector2(1.9723837, 1.6136118)
+texture = ExtResource("1_gi7k6")
+
+[node name="Godot" type="Node2D" parent="." unique_id=519269547]
+
+[node name="Godot" type="TextureRect" parent="Godot" unique_id=1538044563]
+offset_left = 629.0
+offset_top = 254.0
+offset_right = 693.0
+offset_bottom = 318.0
+scale = Vector2(1.6580817, 1.7721783)
+texture = ExtResource("3_0hvi2")
+
+[node name="Animation" type="AnimationPlayer" parent="Godot" unique_id=246615849]
+
+[node name="Player" parent="." unique_id=758184909 instance=ExtResource("2_0hvi2")]
+position = Vector2(1008, 310)
