@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://cj6cidfokrm3u"]
 
+[ext_resource type="Script" uid="uid://cw48yfn6gemql" path="res://timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_187gu"]
+[ext_resource type="Texture2D" uid="uid://c46t0n816hn07" path="res://pixil-frame-0.png" id="2_3mivm"]
+
 [node name="Level_scene" type="Node2D" unique_id=1116792213]
+script = ExtResource("1_3mivm")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1339183431]
+offset_right = 1150.0
+offset_bottom = 646.0
+texture = ExtResource("1_187gu")
+
+[node name="SDContainer" type="HBoxContainer" parent="." unique_id=1238986290]
+offset_left = 309.0
+offset_top = 115.0
+offset_right = 815.0
+offset_bottom = 196.0
+
+[node name="SDCard" type="TextureRect" parent="SDContainer" unique_id=253511673]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+stretch_mode = 3
+
+[node name="SDCard2" type="TextureRect" parent="SDContainer" unique_id=805489741]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+stretch_mode = 3
+
+[node name="SDCard3" type="TextureRect" parent="SDContainer" unique_id=692693346]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+stretch_mode = 3
+
+[node name="SDCard4" type="TextureRect" parent="SDContainer" unique_id=1590917246]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+stretch_mode = 3
+
+[node name="SDCard5" type="TextureRect" parent="SDContainer" unique_id=436077035]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+stretch_mode = 3
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=531686412]
+offset_left = 200.0
+offset_top = 241.0
+offset_right = 311.0
+offset_bottom = 271.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Level #:"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=86928692]
+offset_left = 206.0
+offset_top = 339.0
+offset_right = 366.0
+offset_bottom = 400.0
+theme_override_font_sizes/normal_font_size = 31
+text = "0.00"

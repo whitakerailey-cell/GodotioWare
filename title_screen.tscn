@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_v6p8y"]
 [ext_resource type="Script" uid="uid://cq53stqpwywxg" path="res://start.gd" id="2_ig5kc"]
 [ext_resource type="Script" uid="uid://bcrkh6vfg3bfv" path="res://quit.gd" id="3_05l2w"]
+[ext_resource type="Script" uid="uid://dchrv036nfnbx" path="res://settings.gd" id="3_hafda"]
 
 [node name="Title_screen" type="Node2D" unique_id=487388280]
 
@@ -45,6 +46,7 @@ theme_override_colors/font_outline_color = Color(0.5137255, 0.42745098, 0.898039
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
 text = "Settings"
+script = ExtResource("3_hafda")
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1224329172]
 layout_mode = 2
@@ -55,4 +57,5 @@ text = "Quit"
 script = ExtResource("3_05l2w")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_pressed"]

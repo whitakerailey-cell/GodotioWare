@@ -1,7 +1,5 @@
-extends Node
+extends Node2D
 
-var mingames_completed = 0
-var lives = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
