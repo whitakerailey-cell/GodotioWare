@@ -244,6 +244,17 @@ position = Vector2(-4.010761, -11.28038)
 scale = Vector2(2.5913987, 2.5904076)
 shape = SubResource("CircleShape2D_wh6qq")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1609599695]
+clip_contents = false
+offset_left = 623.0
+offset_top = 65.0
+offset_right = 1034.0
+offset_bottom = 162.0
+theme_override_colors/font_outline_color = Color(0, 0.35686275, 0.79607844, 1)
+theme_override_constants/outline_size = 24
+theme_override_font_sizes/normal_font_size = 50
+text = "Grab the godots!"
+
 [connection signal="garlic_collected" from="Godot" to="." method="_on_godot_garlic_collected"]
 [connection signal="garlic_collected" from="Godot2" to="." method="_on_godot_2_garlic_collected"]
 [connection signal="garlic_collected" from="Godot3" to="." method="_on_godot_3_garlic_collected"]
