@@ -48,3 +48,9 @@ texture = ExtResource("1_4flbx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1487376625]
 position = Vector2(57, 78.5)
 shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1718865944]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=466219462]
+position = Vector2(57, 78.5)
+shape = SubResource("RectangleShape2D_onrkg")

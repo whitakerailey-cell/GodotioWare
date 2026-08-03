@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://btg0eu45vxkra" path="res://node_2d.gd" id="1_himf5"]
 
-[node name="Node2D" type="Node2D" unique_id=464582803]
+[node name="ThemedTimer" type="Node2D" unique_id=464582803]
 script = ExtResource("1_himf5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=485241788]
+[node name="timer" type="RichTextLabel" parent="." unique_id=485241788]
 offset_right = 40.0
 offset_bottom = 40.0
+text = "0.0"
