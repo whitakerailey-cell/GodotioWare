@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bu6tswrxq2kyt"]
 
-[ext_resource type="Texture2D" uid="uid://f2tvc0td57wb" path="res://442-4426310_using-gimp-i-made-this-2048-x-2048.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://d0k2smjdv52op" path="res://Godotguy.png" id="1_4flbx"]
 
 [sub_resource type="GDScript" id="GDScript_onrkg"]
 resource_name = "playerscript"

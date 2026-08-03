@@ -12,27 +12,26 @@ script/source = "extends Node2D
 
 
 
-var garlic_collected = 0 # just keeping track of garlic collected
+var godots_collected = 0 # just keeping track of garlic collected
 var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
-
+	await themed_timer.Timer(10.0) #accessing a function from this node
+	#after this is compeleted...
+	timer_end = true # now we're saying \"oh ye you ran out of time\"
+	
 		#Below you can see that I have a function that I named. I grab a 
 		#function from it that was created in it's script and use `await` to 
 		# tell the script to wait for a signal, or for when a function finshes
 
 
-	await themed_timer.Timer(10.0) #accessing a function from this node
-	#after this is compeleted...
-	timer_end = true # now we're saying \"oh ye you ran out of time\"
 
 func _process(delta: float) -> void: # running every frame brochacho
-	
-	if garlic_collected == 3: # the double equals is just an argument asking if it's the same, with \"=\" it'll give an error
+	if godots_collected == 3: # the double equals is just an argument asking if it's the same, with \"=\" it'll give an error
 		if GlobalVars.minigames_completed > 3: # we access a global script and see how many minigames have been compeleted
-			get_tree().change_scene_to_file(\"res://scenes/done_screen.tscn\") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
+			get_tree().change_scene_to_file(\"res://done_screen.tscn\") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
-			get_tree().change_scene_to_file(\"res://scenes/timer_screen.tscn\") # go back to the intermission scene
+			get_tree().change_scene_to_file(\"res://level_scene.tscn\") # go back to the intermission scene
 	
 	if timer_end: # if the timer does end...
 		GlobalVars.minigames_completed -=1 #go back a minigame
@@ -40,9 +39,24 @@ func _process(delta: float) -> void: # running every frame brochacho
 		get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
 		
 
-func garlic_collect() -> void: # cool function that you connect to those garlics
-	garlic_collected = garlic_collected +1
+func godot_collect() -> void: # cool function that you connect to those garlics
+	godots_collected += 1
 	return
+
+
+
+
+
+func _on_godot_3_garlic_collected() -> void:
+	godot_collect()
+
+
+func _on_godot_2_garlic_collected() -> void:
+	godot_collect()
+
+
+func _on_godot_garlic_collected() -> void:
+	godot_collect()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6gmb"]
@@ -177,15 +191,21 @@ position = Vector2(-4.010761, -11.28038)
 scale = Vector2(2.5913987, 2.5904076)
 shape = SubResource("CircleShape2D_wh6qq")
 
+[node name="Player" parent="." unique_id=758184909 instance=ExtResource("2_0hvi2")]
+position = Vector2(1008, 310)
+
+[node name="ThemedTimer" parent="." unique_id=464582803 instance=ExtResource("4_r6gmb")]
+
 [node name="Godot2" type="Node2D" parent="." unique_id=944307941]
+unique_name_in_owner = true
 scale = Vector2(0.99730164, 0.9751457)
 script = SubResource("GDScript_r6gmb")
 
 [node name="Godot" type="TextureRect" parent="Godot2" unique_id=737077579]
-offset_left = 47.12714
-offset_top = -9.229385
-offset_right = 111.12714
-offset_bottom = 54.770615
+offset_left = 145.39232
+offset_top = 137.41539
+offset_right = 209.39232
+offset_bottom = 201.41539
 scale = Vector2(1.6580817, 1.7721783)
 texture = ExtResource("3_0hvi2")
 
@@ -193,7 +213,7 @@ texture = ExtResource("3_0hvi2")
 libraries/ = SubResource("AnimationLibrary_wh6qq")
 
 [node name="Area2D" type="Area2D" parent="Godot2" unique_id=321862836]
-position = Vector2(103.27864, 48.19792)
+position = Vector2(206.55736, 194.84268)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Godot2/Area2D" unique_id=713960324]
 position = Vector2(-4.010761, -11.28038)
@@ -201,14 +221,15 @@ scale = Vector2(2.5913987, 2.5904076)
 shape = SubResource("CircleShape2D_wh6qq")
 
 [node name="Godot3" type="Node2D" parent="." unique_id=398498242]
+unique_name_in_owner = true
 scale = Vector2(0.99730164, 0.9751457)
 script = SubResource("GDScript_r6gmb")
 
 [node name="Godot" type="TextureRect" parent="Godot3" unique_id=358707053]
-offset_left = 31.08387
-offset_top = -36.91754
-offset_right = 95.08387
-offset_bottom = 27.082458
+offset_left = 156.42209
+offset_top = 383.5325
+offset_right = 220.42209
+offset_bottom = 447.5325
 scale = Vector2(1.6580817, 1.7721783)
 texture = ExtResource("3_0hvi2")
 
@@ -216,14 +237,13 @@ texture = ExtResource("3_0hvi2")
 libraries/ = SubResource("AnimationLibrary_wh6qq")
 
 [node name="Area2D" type="Area2D" parent="Godot3" unique_id=1300618792]
-position = Vector2(87.235374, 18.458788)
+position = Vector2(216.58441, 440.95978)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Godot3/Area2D" unique_id=136578592]
 position = Vector2(-4.010761, -11.28038)
 scale = Vector2(2.5913987, 2.5904076)
 shape = SubResource("CircleShape2D_wh6qq")
 
-[node name="Player" parent="." unique_id=758184909 instance=ExtResource("2_0hvi2")]
-position = Vector2(1008, 310)
-
-[node name="ThemedTimer" parent="." unique_id=464582803 instance=ExtResource("4_r6gmb")]
+[connection signal="garlic_collected" from="Godot" to="." method="_on_godot_garlic_collected"]
+[connection signal="garlic_collected" from="Godot2" to="." method="_on_godot_2_garlic_collected"]
+[connection signal="garlic_collected" from="Godot3" to="." method="_on_godot_3_garlic_collected"]
