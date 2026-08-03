@@ -52,6 +52,9 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(GlobalVars.minigames_completed) # this tells you want minigame you're on using concatenation (google the word yo)
+	if GlobalVars.lives <= 0:
+		get_tree().change_scene_to_file("lose_screen.tscn")
+
 
 func Timer(start_time: float): # making a new function for timer countdown!
 	# we want the timer to go down, and when it reaches 0 it transitions 

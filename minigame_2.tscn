@@ -13,7 +13,7 @@ var timer_end = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await themed_timer.Timer(7.0)
+	await themed_timer.Timer(4.0)
 	timer_end = true
 
 
@@ -21,12 +21,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if buttons_pressed == 7:
 		if GlobalVars.minigames_completed > 3:
-			get_tree().change_scene_to_file(\"replace_later.tscn\")
+			get_tree().change_scene_to_file(\"win_screen.tscn\")
 		else:
 			get_tree().change_scene_to_file(\"level_scene.tscn\")
 	if timer_end:
 		GlobalVars.lives -= 1
-		GlobalVars.minigames_done -=1
+		GlobalVars.minigames_completed -=1
 		get_tree().change_scene_to_file(\"res://scenes/timer_screen.tscn\")
 "
 
@@ -118,10 +118,10 @@ script = SubResource("GDScript_2425y")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=511232495]
 clip_contents = false
-offset_left = 394.0
-offset_top = 282.0
-offset_right = 805.0
-offset_bottom = 379.0
+offset_left = 369.0
+offset_top = 297.0
+offset_right = 780.0
+offset_bottom = 394.0
 theme_override_colors/font_outline_color = Color(0, 0.35686275, 0.79607844, 1)
 theme_override_constants/outline_size = 24
 theme_override_font_sizes/normal_font_size = 50

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dbuixp6twq6jc"]
+
+[ext_resource type="Texture2D" uid="uid://p6fy5rlv5qp3" path="res://red-bug-symbol-24711_64.png" id="1_g6v7b"]
+
+[sub_resource type="GDScript" id="GDScript_hs7dx"]
+resource_name = "BugSprite"
+script/source = "extends CharacterBody2D
+
+func _physic_process(_delta:float) -> void:
+	position.y -= 5
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_g6v7b"]
+script/source = "extends Area2D
+@onready var self_area = self
+@onready var player_area = $\"../Player/Area2D\"
+
+func ready() -> void:
+	pass
+
+func _process(delta: float) -> void:
+	if player_area.overlaps_area(self_area):
+		if self.visible:
+			emit_signal(\"player_hit_by_bug\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ryj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c761e"]
+
+[node name="Bug" type="CharacterBody2D" unique_id=1624786630]
+script = SubResource("GDScript_hs7dx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769071869]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2002839441]
+script = SubResource("GDScript_g6v7b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=510126358]
+shape = SubResource("RectangleShape2D_q3ryj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=464414147]
+shape = SubResource("RectangleShape2D_c761e")
+
+[node name="bugSprite" type="Sprite2D" parent="." unique_id=1428031238]
+rotation = -3.1349304
+scale = Vector2(0.375, 0.421875)
+texture = ExtResource("1_g6v7b")

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://xmjn7vu52lih"]
+
+[ext_resource type="Texture2D" uid="uid://32wcuytljc3e" path="res://d7hftxdivxxvm.cloudfront.webp" id="1_5xr8p"]
+[ext_resource type="PackedScene" uid="uid://dbuixp6twq6jc" path="res://bug.tscn" id="2_33dbb"]
+[ext_resource type="PackedScene" uid="uid://bu6tswrxq2kyt" path="res://player.tscn" id="3_cdg48"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1i1uu"]
+size = Vector2(39.999992, 40)
+
+[node name="minigame_3" type="Node2D" unique_id=1815022425]
+
+[node name="D7Hftxdivxxvm_cloudfront" type="Sprite2D" parent="." unique_id=741698069]
+position = Vector2(666, 326.00003)
+scale = Vector2(1.5813187, 1.1010929)
+texture = ExtResource("1_5xr8p")
+
+[node name="Bug" parent="." unique_id=1624786630 instance=ExtResource("2_33dbb")]
+position = Vector2(185.99997, -151)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Platform1" type="StaticBody2D" parent="Bug" unique_id=149363633]
+position = Vector2(-42.40114, 148.02568)
+scale = Vector2(6.1903234, 0.8880091)
+
+[node name="ColorRect" type="ColorRect" parent="Bug/Platform1" unique_id=1371256906]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bug/Platform1" unique_id=1057395034]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_1i1uu")
+
+[node name="Bug2" parent="." unique_id=1933915903 instance=ExtResource("2_33dbb")]
+position = Vector2(1046, -448.99997)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Bug3" parent="." unique_id=610790172 instance=ExtResource("2_33dbb")]
+position = Vector2(719.00006, -644)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Bug4" parent="." unique_id=933891278 instance=ExtResource("2_33dbb")]
+position = Vector2(439.99997, -644)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Bug5" parent="." unique_id=143066049 instance=ExtResource("2_33dbb")]
+position = Vector2(58, -1277)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Bug6" parent="." unique_id=1564765548 instance=ExtResource("2_33dbb")]
+position = Vector2(879, -1312)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Bug7" parent="." unique_id=1356584969 instance=ExtResource("2_33dbb")]
+position = Vector2(658.00006, -1792)
+scale = Vector2(5.3300447, 5.4247336)
+
+[node name="Player" parent="." unique_id=758184909 instance=ExtResource("3_cdg48")]
+position = Vector2(481, 468)

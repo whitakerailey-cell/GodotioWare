@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cmbo4nskp7dcr"]
+
+[ext_resource type="Texture2D" uid="uid://32wcuytljc3e" path="res://d7hftxdivxxvm.cloudfront.webp" id="1_olb4h"]
+[ext_resource type="Texture2D" uid="uid://dsl56blo8xqol" path="res://pixil-frame-0 (2).png" id="2_55hru"]
+[ext_resource type="Texture2D" uid="uid://c46t0n816hn07" path="res://pixil-frame-0.png" id="3_vfmkw"]
+[ext_resource type="Texture2D" uid="uid://dliegyybe4vey" path="res://tumblr_41a1bd9c061b4794ac5ff5621ff9bba1_c48f9c8d_540.png" id="4_7i1wi"]
+
+[sub_resource type="GDScript" id="GDScript_kcqh2"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" type="Node2D" unique_id=1937841285]
+
+[node name="WindowsXPBackground" type="Sprite2D" parent="." unique_id=1570987105]
+position = Vector2(514, 323)
+scale = Vector2(1.4460748, 1.1486808)
+texture = ExtResource("1_olb4h")
+
+[node name="CursorHoldingGodot" type="Node2D" parent="." unique_id=754326465]
+
+[node name="Cursor" type="Sprite2D" parent="CursorHoldingGodot" unique_id=121109803]
+z_index = 1
+position = Vector2(815, 315.00003)
+scale = Vector2(2.453125, 2.203125)
+texture = ExtResource("2_55hru")
+
+[node name="PixilFrame0" type="Sprite2D" parent="CursorHoldingGodot" unique_id=739487936]
+position = Vector2(757, 311)
+scale = Vector2(3.078125, 2.984375)
+texture = ExtResource("3_vfmkw")
+script = SubResource("GDScript_kcqh2")
+
+[node name="Tumblr41a1Bd9c061b4794Ac5Ff5621Ff9Bba1C48f9c8d540" type="Sprite2D" parent="." unique_id=267761023]
+position = Vector2(209, 492.00006)
+scale = Vector2(0.6240741, 0.626)
+texture = ExtResource("4_7i1wi")
