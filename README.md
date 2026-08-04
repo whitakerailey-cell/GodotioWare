@@ -2,7 +2,7 @@
 
 A short series of microgames themed around the game engine Godot.
 
-![a short gif showcasing the gameplay of the third minigame, dodge the bugs, in the game GodotioWare.](C:\Users\whita\Downloads\095e35ff-39a2-4b5a-bffa-d0f7d0150ce1.gif)
+![a short gif showcasing the gameplay of the third minigame, dodge the bugs, in the game GodotioWare.](GodotioWare/GodotioWareGIF.html)
 
 try my game [here](https://whit-240.itch.io/godotioware)!
 
