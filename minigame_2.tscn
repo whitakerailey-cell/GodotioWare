@@ -118,10 +118,10 @@ script = SubResource("GDScript_2425y")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=511232495]
 clip_contents = false
-offset_left = 369.0
-offset_top = 297.0
-offset_right = 780.0
-offset_bottom = 394.0
+offset_left = 363.0
+offset_top = 301.0
+offset_right = 774.0
+offset_bottom = 398.0
 theme_override_colors/font_outline_color = Color(0, 0.35686275, 0.79607844, 1)
 theme_override_constants/outline_size = 24
 theme_override_font_sizes/normal_font_size = 50
