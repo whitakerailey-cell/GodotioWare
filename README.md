@@ -15,11 +15,11 @@ it has:
 
 the microgames included are:
 
--Collect the Godots: collect all the Godots in time through platforming!
+- Collect the Godots: collect all the Godots in time through platforming!
 
--Smash the bugs: smash the bugs in time by clicking on them!
+- Smash the bugs: smash the bugs in time by clicking on them!
 
--Dodge the bugs: dodge the falling bugs by moving left and right, and survive them all to win!
+- Dodge the bugs: dodge the falling bugs by moving left and right, and survive them all to win!
 
--Smash the bug: smash the bug with the recycling bin by pressing space at the right time!
+- Smash the bug: smash the bug with the recycling bin by pressing space at the right time!
 
