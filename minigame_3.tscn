@@ -3,11 +3,90 @@
 [ext_resource type="Texture2D" uid="uid://32wcuytljc3e" path="res://d7hftxdivxxvm.cloudfront.webp" id="1_5xr8p"]
 [ext_resource type="PackedScene" uid="uid://dbuixp6twq6jc" path="res://bug.tscn" id="2_33dbb"]
 [ext_resource type="PackedScene" uid="uid://bu6tswrxq2kyt" path="res://player.tscn" id="3_cdg48"]
+[ext_resource type="PackedScene" uid="uid://bfihfl3js83rs" path="res://themed_timer.tscn" id="4_33dbb"]
+
+[sub_resource type="GDScript" id="GDScript_5xr8p"]
+script/source = "extends Node2D
+@onready var themed_timer: Node2D = $ThemedTimer 
+# ^^^ You dragged this in the scene by the way 
+
+var timer_end = false # boolean (true or false) stating whether the timer ended
+
+func _ready() -> void:
+	await themed_timer.Timer(10.0) #accessing a function from this node
+	#after this is compeleted...
+	timer_end = true # now we're saying \"oh ye you ran out of time\"
+	
+		#Below you can see that I have a function that I named. I grab a 
+		#function from it that was created in it's script and use `await` to 
+		# tell the script to wait for a signal, or for when a function finshes
+
+func _process(delta: float) -> void: # running every frame brochacho
+	if timer_end: # the double equals is just an argument asking if it's the same, with \"=\" it'll give an error
+		GlobalVars.minigames_completed += 1
+		if GlobalVars.minigames_completed > 3: # we access a global script and see how many minigames have been compeleted
+			get_tree().change_scene_to_file(\"res://win_screen.tscn\") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
+		else:
+			get_tree().change_scene_to_file(\"res://level_scene.tscn\") # go back to the intermission scene
+
+
+func _on_bug_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+
+
+
+func _on_bug_2_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+
+
+
+func _on_bug_3_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+
+
+
+
+func _on_bug_4_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+
+
+
+
+func _on_bug_5_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+
+
+
+
+func _on_bug_6_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+
+
+
+
+func _on_bug_7_playerhit() -> void:
+	GlobalVars.minigames_completed -= 1
+	GlobalVars.lives -= 1 # lose ur lives
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\") # back to intermission
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1i1uu"]
 size = Vector2(39.999992, 40)
 
 [node name="minigame_3" type="Node2D" unique_id=1815022425]
+script = SubResource("GDScript_5xr8p")
 
 [node name="D7Hftxdivxxvm_cloudfront" type="Sprite2D" parent="." unique_id=741698069]
 position = Vector2(666, 326.00003)
@@ -15,20 +94,8 @@ scale = Vector2(1.5813187, 1.1010929)
 texture = ExtResource("1_5xr8p")
 
 [node name="Bug" parent="." unique_id=1624786630 instance=ExtResource("2_33dbb")]
-position = Vector2(185.99997, -151)
+position = Vector2(314, 123)
 scale = Vector2(5.3300447, 5.4247336)
-
-[node name="Platform1" type="StaticBody2D" parent="Bug" unique_id=149363633]
-position = Vector2(-42.40114, 148.02568)
-scale = Vector2(6.1903234, 0.8880091)
-
-[node name="ColorRect" type="ColorRect" parent="Bug/Platform1" unique_id=1371256906]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bug/Platform1" unique_id=1057395034]
-position = Vector2(20, 20)
-shape = SubResource("RectangleShape2D_1i1uu")
 
 [node name="Bug2" parent="." unique_id=1933915903 instance=ExtResource("2_33dbb")]
 position = Vector2(1046, -448.99997)
@@ -56,3 +123,37 @@ scale = Vector2(5.3300447, 5.4247336)
 
 [node name="Player" parent="." unique_id=758184909 instance=ExtResource("3_cdg48")]
 position = Vector2(481, 468)
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=149363633]
+position = Vector2(-11, 648)
+scale = Vector2(32.9947, 4.8172126)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1371256906]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1057395034]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_1i1uu")
+
+[node name="ThemedTimer" parent="." unique_id=464582803 instance=ExtResource("4_33dbb")]
+position = Vector2(3153.1836, 644.2307)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=139526568]
+clip_contents = false
+offset_left = 623.0
+offset_top = 65.0
+offset_right = 1034.0
+offset_bottom = 162.0
+theme_override_colors/font_outline_color = Color(0, 0.35686275, 0.79607844, 1)
+theme_override_constants/outline_size = 24
+theme_override_font_sizes/normal_font_size = 50
+text = "Dodge the bugs!"
+
+[connection signal="playerhit" from="Bug" to="." method="_on_bug_playerhit"]
+[connection signal="playerhit" from="Bug2" to="." method="_on_bug_2_playerhit"]
+[connection signal="playerhit" from="Bug3" to="." method="_on_bug_3_playerhit"]
+[connection signal="playerhit" from="Bug4" to="." method="_on_bug_4_playerhit"]
+[connection signal="playerhit" from="Bug5" to="." method="_on_bug_5_playerhit"]
+[connection signal="playerhit" from="Bug6" to="." method="_on_bug_6_playerhit"]
+[connection signal="playerhit" from="Bug7" to="." method="_on_bug_7_playerhit"]

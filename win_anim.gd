@@ -1,18 +1,12 @@
-extends Button
+extends AnimationPlayer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	play("win_animation")
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_pressed() -> void:
-	GlobalVars.lives = 5
-	GlobalVars.minigames_completed = 0
-	get_tree().change_scene_to_file("res://level_scene.tscn")
-	pass # Replace with function body.

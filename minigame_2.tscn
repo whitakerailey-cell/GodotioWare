@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 	if timer_end:
 		GlobalVars.lives -= 1
 		GlobalVars.minigames_completed -=1
-		get_tree().change_scene_to_file(\"res://scenes/timer_screen.tscn\")
+		get_tree().change_scene_to_file(\"res://level_scene.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_2425y"]
