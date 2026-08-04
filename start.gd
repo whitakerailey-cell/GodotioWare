@@ -12,7 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	GlobalVars.lives = 5
-	GlobalVars.minigames_completed = 0
+	if GlobalVars.minigames_completed >= 4 or GlobalVars.lives <= 0:
+		GlobalVars.lives = 5
+		GlobalVars.minigames_completed = 0
 	get_tree().change_scene_to_file("res://level_scene.tscn")
 	pass # Replace with function body.

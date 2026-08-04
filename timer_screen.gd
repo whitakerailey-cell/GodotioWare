@@ -13,7 +13,7 @@ var time
 func _ready() -> void:
 	await Timer(5.0) # using the function created
 	
-	if GlobalVars.minigames_completed < 3: # if you havent completed 3 minigames yet 
+	if GlobalVars.minigames_completed < 4: # if you havent completed 3 minigames yet 
 		GlobalVars.minigames_completed = GlobalVars.minigames_completed +1
 		get_tree().change_scene_to_file("res://minigame_" + str(GlobalVars.minigames_completed) + ".tscn") # changes your scene by arranging this frankenstein path. 
 	elif GlobalVars.minigames_completed == 0:
@@ -51,7 +51,7 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 			garlic_container.hide() # just hides everything
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
-	level.text = "Level " + str(GlobalVars.minigames_completed) # this tells you want minigame you're on using concatenation (google the word yo)
+	level.text = "Level " + str(GlobalVars.minigames_completed + 1) # this tells you want minigame you're on using concatenation (google the word yo)
 	if GlobalVars.lives <= 0:
 		get_tree().change_scene_to_file("lose_screen.tscn")
 

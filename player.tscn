@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(134, 177)
+size = Vector2(134, 143)
 
 [node name="Player" type="CharacterBody2D" unique_id=758184909]
 position = Vector2(448, 240)
