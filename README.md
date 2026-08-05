@@ -2,7 +2,7 @@
 
 A short series of microgames themed around the game engine Godot.
 
-![a short gif showcasing the gameplay of the third minigame, dodge the bugs, in the game GodotioWare.](C:\Users\whita\Downloads\095e35ff-39a2-4b5a-bffa-d0f7d0150ce1.gif)
+![a short gif showcasing the gameplay of the third minigame, dodge the bugs, in the game GodotioWare.](Mygif.gif)
 
 try my game [here](https://whit-240.itch.io/godotioware)!
 
@@ -15,11 +15,11 @@ it has:
 
 the microgames included are:
 
--Collect the Godots: collect all the Godots in time through platforming!
+- Collect the Godots: collect all the Godots in time through platforming!
 
--Smash the bugs: smash the bugs in time by clicking on them!
+- Smash the bugs: smash the bugs in time by clicking on them!
 
--Dodge the bugs: dodge the falling bugs by moving left and right, and survive them all to win!
+- Dodge the bugs: dodge the falling bugs by moving left and right, and survive them all to win!
 
--Smash the bug: smash the bug with the recycling bin by pressing space at the right time!
+- Smash the bug: smash the bug with the recycling bin by pressing space at the right time!
 
