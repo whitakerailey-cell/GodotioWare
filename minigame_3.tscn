@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xmjn7vu52lih"]
 
-[ext_resource type="Texture2D" uid="uid://32wcuytljc3e" path="res://d7hftxdivxxvm.cloudfront.webp" id="1_5xr8p"]
+[ext_resource type="Texture2D" uid="uid://cvd33aiwa2x0v" path="res://reshud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.png" id="1_33dbb"]
 [ext_resource type="PackedScene" uid="uid://dbuixp6twq6jc" path="res://bug.tscn" id="2_33dbb"]
 [ext_resource type="PackedScene" uid="uid://bu6tswrxq2kyt" path="res://player.tscn" id="3_cdg48"]
 [ext_resource type="PackedScene" uid="uid://bfihfl3js83rs" path="res://themed_timer.tscn" id="4_33dbb"]
@@ -88,9 +88,9 @@ size = Vector2(39.999992, 40)
 script = SubResource("GDScript_5xr8p")
 
 [node name="D7Hftxdivxxvm_cloudfront" type="Sprite2D" parent="." unique_id=741698069]
-position = Vector2(666, 326.00003)
-scale = Vector2(1.5813187, 1.1010929)
-texture = ExtResource("1_5xr8p")
+position = Vector2(589, 306)
+scale = Vector2(2.4969933, 2.24235)
+texture = ExtResource("1_33dbb")
 
 [node name="Bug" parent="." unique_id=1624786630 instance=ExtResource("2_33dbb")]
 position = Vector2(314, 123)

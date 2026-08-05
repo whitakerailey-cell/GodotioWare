@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://dbuixp6twq6jc"]
 
-[ext_resource type="Texture2D" uid="uid://p6fy5rlv5qp3" path="res://red-bug-symbol-24711_64.png" id="1_g6v7b"]
 [ext_resource type="Script" uid="uid://vhfuswbxrwhi" path="res://bug.gd" id="1_hs7dx"]
+[ext_resource type="Texture2D" uid="uid://bigvn2qnaj6qi" path="res://pixil-frame-0 (4).png" id="2_hs7dx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c761e"]
 
 [node name="Bug" type="CharacterBody2D" unique_id=1624786630]
 script = ExtResource("1_hs7dx")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769071869]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=464414147]
 shape = SubResource("RectangleShape2D_c761e")
 
 [node name="bugSprite" type="Sprite2D" parent="." unique_id=1428031238]
+position = Vector2(2, -3)
 rotation = -3.1349304
-scale = Vector2(0.375, 0.421875)
-texture = ExtResource("1_g6v7b")
+scale = Vector2(0.57459867, 0.5394627)
+texture = ExtResource("2_hs7dx")

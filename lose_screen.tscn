@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://me7q40ly2v2f"]
 
-[ext_resource type="Texture2D" uid="uid://32wcuytljc3e" path="res://d7hftxdivxxvm.cloudfront.webp" id="1_6mmkj"]
+[ext_resource type="Texture2D" uid="uid://d13bfdj3x40is" path="res://pixil-frame-0 (6).png" id="1_8gtgy"]
 [ext_resource type="Texture2D" uid="uid://dsl56blo8xqol" path="res://pixil-frame-0 (2).png" id="2_ed4nj"]
 [ext_resource type="Texture2D" uid="uid://c46t0n816hn07" path="res://pixil-frame-0.png" id="3_14evm"]
-[ext_resource type="Texture2D" uid="uid://dliegyybe4vey" path="res://tumblr_41a1bd9c061b4794ac5ff5621ff9bba1_c48f9c8d_540.png" id="4_8gtgy"]
+[ext_resource type="Texture2D" uid="uid://3gisdc1yokkw" path="res://pixil-frame-0 (9).png" id="4_pmgax"]
 [ext_resource type="Script" uid="uid://cq53stqpwywxg" path="res://start.gd" id="5_14evm"]
 [ext_resource type="Script" uid="uid://bcrkh6vfg3bfv" path="res://quit.gd" id="6_8gtgy"]
+[ext_resource type="Texture2D" uid="uid://h16ypl82lwlr" path="res://pixil-frame-0 (8).png" id="7_01jlt"]
 
 [sub_resource type="Animation" id="Animation_6mmkj"]
 resource_name = "Godot_shaking"
@@ -162,9 +163,9 @@ func _process(delta: float) -> void:
 [node name="Node2D" type="Node2D" unique_id=1937841285]
 
 [node name="WindowsXPBackground" type="Sprite2D" parent="." unique_id=1570987105]
-position = Vector2(514, 323)
-scale = Vector2(1.4460748, 1.1486808)
-texture = ExtResource("1_6mmkj")
+position = Vector2(589, 311)
+scale = Vector2(1.1907691, 0.6501769)
+texture = ExtResource("1_8gtgy")
 
 [node name="CursorHoldingGodot" type="Node2D" parent="." unique_id=754326465]
 
@@ -203,9 +204,9 @@ theme_override_font_sizes/normal_font_size = 49
 text = "Godot.exe has been deleted."
 
 [node name="Recycle_Bin" type="Sprite2D" parent="." unique_id=267761023]
-position = Vector2(209, 492.00006)
-scale = Vector2(0.6240741, 0.626)
-texture = ExtResource("4_8gtgy")
+position = Vector2(238, 464)
+scale = Vector2(0.8471933, 0.8481564)
+texture = ExtResource("4_pmgax")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=643068568]
 offset_left = 129.0
@@ -236,6 +237,11 @@ theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 17
 text = "Quit"
 script = ExtResource("6_8gtgy")
+
+[node name="PixilFrame0(8)" type="Sprite2D" parent="." unique_id=622945030]
+position = Vector2(1074, 110.00001)
+scale = Vector2(0.2421875, 0.24316406)
+texture = ExtResource("7_01jlt")
 
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

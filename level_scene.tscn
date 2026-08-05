@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cj6cidfokrm3u"]
 
 [ext_resource type="Script" uid="uid://cw48yfn6gemql" path="res://timer_screen.gd" id="1_3mivm"]
-[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_187gu"]
 [ext_resource type="Texture2D" uid="uid://c46t0n816hn07" path="res://pixil-frame-0.png" id="2_3mivm"]
+[ext_resource type="Texture2D" uid="uid://d13bfdj3x40is" path="res://pixil-frame-0 (6).png" id="2_lwxgr"]
 
 [sub_resource type="Animation" id="Animation_0hvi2"]
 resource_name = "Floating"
@@ -60,9 +60,10 @@ func _process(delta: float) -> void:
 script = ExtResource("1_3mivm")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1339183431]
-offset_right = 1150.0
-offset_bottom = 646.0
-texture = ExtResource("1_187gu")
+offset_right = 1694.0
+offset_bottom = 1024.0
+scale = Vector2(0.7053935, 0.66577077)
+texture = ExtResource("2_lwxgr")
 
 [node name="SDContainer" type="HBoxContainer" parent="." unique_id=1238986290]
 offset_left = 358.0
@@ -96,17 +97,19 @@ texture = ExtResource("2_3mivm")
 stretch_mode = 3
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=531686412]
-offset_left = 431.0
-offset_top = 201.0
-offset_right = 504.0
-offset_bottom = 244.0
+offset_left = 401.0
+offset_top = 191.0
+offset_right = 474.0
+offset_bottom = 234.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Level #:"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=86928692]
-offset_left = 615.0
-offset_top = 203.0
-offset_right = 655.0
-offset_bottom = 243.0
+offset_left = 581.0
+offset_top = 188.0
+offset_right = 621.0
+offset_bottom = 228.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "0.00"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=342629342]

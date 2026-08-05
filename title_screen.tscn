@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://bm7ihkpnnbtm2"]
 
-[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://d13bfdj3x40is" path="res://pixil-frame-0 (6).png" id="1_tpml5"]
 [ext_resource type="Script" uid="uid://cq53stqpwywxg" path="res://start.gd" id="2_ig5kc"]
 [ext_resource type="Script" uid="uid://bcrkh6vfg3bfv" path="res://quit.gd" id="3_05l2w"]
 [ext_resource type="Script" uid="uid://dchrv036nfnbx" path="res://settings.gd" id="3_hafda"]
+[ext_resource type="Texture2D" uid="uid://h16ypl82lwlr" path="res://pixil-frame-0 (8).png" id="5_jqemp"]
+[ext_resource type="Texture2D" uid="uid://3gisdc1yokkw" path="res://pixil-frame-0 (9).png" id="6_013yr"]
 
 [node name="Title_screen" type="Node2D" unique_id=487388280]
 
 [node name="Background" type="TextureRect" parent="." unique_id=1413977682]
-offset_left = -20.000002
-offset_top = -12.0
-offset_right = 564.0
-offset_bottom = 338.0
-scale = Vector2(2.0800006, 1.9999999)
-texture = ExtResource("1_v6p8y")
+offset_left = -26.0
+offset_top = -42.0
+offset_right = 998.0
+offset_bottom = 982.0
+scale = Vector2(1.1946002, 0.69532144)
+texture = ExtResource("1_tpml5")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=868072196]
 clip_contents = false
@@ -55,6 +57,15 @@ theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
 text = "Quit"
 script = ExtResource("3_05l2w")
+
+[node name="PixilFrame0(8)" type="Sprite2D" parent="." unique_id=1325073667]
+position = Vector2(1054, 134)
+scale = Vector2(0.29573697, 0.24897884)
+texture = ExtResource("5_jqemp")
+
+[node name="PixilFrame0(9)" type="Sprite2D" parent="." unique_id=1577369187]
+position = Vector2(138, 544)
+texture = ExtResource("6_013yr")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_pressed"]

@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://5ok8lhqbj5b"]
 
-[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_26557"]
-[ext_resource type="Texture2D" uid="uid://d0k2smjdv52op" path="res://Godotguy.png" id="2_luvg0"]
+[ext_resource type="Texture2D" uid="uid://cvd33aiwa2x0v" path="res://reshud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.png" id="1_5hoe6"]
+[ext_resource type="Texture2D" uid="uid://ctw6oo6curxqy" path="res://exports/pixil-frame-0 (4).png" id="2_g6jvr"]
 [ext_resource type="Texture2D" uid="uid://c46t0n816hn07" path="res://pixil-frame-0.png" id="3_5hoe6"]
 [ext_resource type="Script" uid="uid://dosd8qah7niut" path="res://win_anim.gd" id="3_g6jvr"]
-[ext_resource type="Texture2D" uid="uid://dliegyybe4vey" path="res://tumblr_41a1bd9c061b4794ac5ff5621ff9bba1_c48f9c8d_540.png" id="4_g6jvr"]
-[ext_resource type="Texture2D" uid="uid://dfkd673k7lwpe" path="res://pixil-frame-0 (3).png" id="5_4kgk1"]
 [ext_resource type="Script" uid="uid://bcrkh6vfg3bfv" path="res://quit.gd" id="6_5hoe6"]
+[ext_resource type="Texture2D" uid="uid://14xm2x40w337" path="res://pixil-frame-0 (10).png" id="7_4kgk1"]
 [ext_resource type="Script" uid="uid://cq53stqpwywxg" path="res://start.gd" id="7_g6jvr"]
 
 [sub_resource type="Animation" id="Animation_ufkpf"]
@@ -101,9 +100,9 @@ func _process(delta: float) -> void:
 [node name="Win_screen" type="Node2D" unique_id=479045103]
 
 [node name="background" type="Sprite2D" parent="." unique_id=1998711109]
-position = Vector2(578.5, 334.5)
-scale = Vector2(1.9640411, 1.8828571)
-texture = ExtResource("1_26557")
+position = Vector2(592.5, 343)
+scale = Vector2(2.4740884, 2.4196723)
+texture = ExtResource("1_5hoe6")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1192074736]
 clip_contents = false
@@ -118,22 +117,13 @@ text = "Congrats! you win!"
 
 [node name="Godotguy" type="Sprite2D" parent="." unique_id=1735800565]
 position = Vector2(342, 430)
-scale = Vector2(0.18588302, 0.19399641)
-texture = ExtResource("2_luvg0")
+scale = Vector2(3.49404, 3.707437)
+texture = ExtResource("2_g6jvr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Godotguy" unique_id=846250379]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_l471v")
 script = ExtResource("3_g6jvr")
-
-[node name="Tumblr41a1Bd9c061b4794Ac5Ff5621Ff9Bba1C48f9c8d540" type="Sprite2D" parent="." unique_id=697867538]
-position = Vector2(836, 510)
-texture = ExtResource("4_g6jvr")
-
-[node name="PixilFrame0(3)" type="Sprite2D" parent="." unique_id=220609559]
-position = Vector2(851.00006, 430)
-scale = Vector2(2.84375, 2.421875)
-texture = ExtResource("5_4kgk1")
 
 [node name="GodotContainer" type="Node2D" parent="." unique_id=542834374]
 position = Vector2(571, 423)
@@ -168,6 +158,10 @@ theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
 text = "play again"
 script = ExtResource("7_g6jvr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=823789433]
+position = Vector2(895, 414)
+texture = ExtResource("7_4kgk1")
 
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]

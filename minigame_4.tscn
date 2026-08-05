@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://5x52ajlfj6ar"]
 
 [ext_resource type="Script" uid="uid://b4hfrdhu2iwbv" path="res://minigame_4.gd" id="1_c5c30"]
-[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_pb0mu"]
 [ext_resource type="Script" uid="uid://cfbddwcbambgt" path="res://rigid_body_2d.gd" id="2_c5c30"]
-[ext_resource type="Texture2D" uid="uid://dliegyybe4vey" path="res://tumblr_41a1bd9c061b4794ac5ff5621ff9bba1_c48f9c8d_540.png" id="3_wae4i"]
+[ext_resource type="Texture2D" uid="uid://cvd33aiwa2x0v" path="res://reshud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.png" id="2_s0wxk"]
+[ext_resource type="Texture2D" uid="uid://3gisdc1yokkw" path="res://pixil-frame-0 (9).png" id="4_f4xpp"]
 [ext_resource type="PackedScene" uid="uid://bfihfl3js83rs" path="res://themed_timer.tscn" id="5_wae4i"]
 [ext_resource type="Script" uid="uid://c8cuvn57ucx88" path="res://BugPacing.gd" id="6_yanj6"]
-[ext_resource type="Texture2D" uid="uid://p6fy5rlv5qp3" path="res://red-bug-symbol-24711_64.png" id="7_s0wxk"]
+[ext_resource type="Texture2D" uid="uid://bigvn2qnaj6qi" path="res://pixil-frame-0 (4).png" id="7_thd57"]
 [ext_resource type="Script" uid="uid://cbsh2ygxug4le" path="res://area_2d.gd" id="8_s0wxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yanj6"]
@@ -20,21 +20,20 @@ script = ExtResource("1_c5c30")
 [node name="HudFramesWhiteGreyUserInterfaceElementsDesignModernTechnologyFuturisticControlPanelScreenDigitalHologramWindowGamingMenuTouchingCyberMonitorSetOnBlackBackgroundVector" type="Sprite2D" parent="." unique_id=1451666089]
 position = Vector2(576.00006, 323)
 scale = Vector2(1.9589041, 1.8485714)
-texture = ExtResource("1_pb0mu")
+texture = ExtResource("2_s0wxk")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1629092827]
 position = Vector2(546, 290)
 script = ExtResource("2_c5c30")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1303952236]
-position = Vector2(-2, -2)
-scale = Vector2(0.5322916, 0.5187491)
-texture = ExtResource("3_wae4i")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1725856987]
 position = Vector2(-3.5, -0.50001526)
 scale = Vector2(14.876763, 12.161276)
 shape = SubResource("RectangleShape2D_yanj6")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=266385675]
+position = Vector2(6, -33)
+texture = ExtResource("4_f4xpp")
 
 [node name="ThemedTimer" parent="." unique_id=464582803 instance=ExtResource("5_wae4i")]
 
@@ -43,10 +42,10 @@ position = Vector2(542, 470)
 script = ExtResource("6_yanj6")
 
 [node name="Bug" type="Sprite2D" parent="Node2D" unique_id=1074915441]
-position = Vector2(2, 1)
+position = Vector2(-2.9999943, -0.99999046)
 rotation = 1.5384443
-scale = Vector2(1.46875, 1.625)
-texture = ExtResource("7_s0wxk")
+scale = Vector2(2.0893903, 2.5780776)
+texture = ExtResource("7_thd57")
 
 [node name="Area2D" type="Area2D" parent="Node2D" unique_id=1772605038]
 position = Vector2(0, 3)

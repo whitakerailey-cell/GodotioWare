@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bd6wi67p2afsv"]
 
-[ext_resource type="Texture2D" uid="uid://ncpddjpur8wj" path="res://hud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.jpg" id="1_666cw"]
+[ext_resource type="Texture2D" uid="uid://cvd33aiwa2x0v" path="res://reshud-frames-white-grey-user-interface-elements-design-modern-technology-futuristic-control-panel-screen-digital-hologram-window-gaming-menu-touching-cyber-monitor-set-on-black-background-vector.png" id="1_666cw"]
 [ext_resource type="Script" uid="uid://cho4k44fc7bob" path="res://start2.gd" id="2_ypl1d"]
 
 [node name="Options_screen" type="Node2D" unique_id=940506720]
