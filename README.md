@@ -11,6 +11,7 @@ it has:
 - a series of short microgames!
 - fast-paced gameplay!
 - a lives system!
+- pixel art assets(and one screenshot) made entirely by me!
 - and, of course, lots of theming around Godot/coding!
 
 the microgames included are:
