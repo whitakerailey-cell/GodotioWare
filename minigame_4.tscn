@@ -27,6 +27,7 @@ position = Vector2(546, 290)
 script = ExtResource("2_c5c30")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1725856987]
+visible = false
 position = Vector2(-3.5, -0.50001526)
 scale = Vector2(14.876763, 12.161276)
 shape = SubResource("RectangleShape2D_yanj6")
@@ -48,6 +49,7 @@ scale = Vector2(2.0893903, 2.5780776)
 texture = ExtResource("7_thd57")
 
 [node name="Area2D" type="Area2D" parent="Node2D" unique_id=1772605038]
+visible = false
 position = Vector2(0, 3)
 scale = Vector2(6.795794, 5.343599)
 script = ExtResource("8_s0wxk")

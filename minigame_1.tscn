@@ -216,6 +216,7 @@ scale = Vector2(1.9723837, 1.6136118)
 texture = ExtResource("1_r6gmb")
 
 [node name="Godot" type="Node2D" parent="." unique_id=519269547]
+visible = false
 scale = Vector2(0.99730164, 0.9751457)
 script = SubResource("GDScript_r6gmb")
 
@@ -232,6 +233,7 @@ libraries/ = SubResource("AnimationLibrary_wh6qq")
 script = SubResource("GDScript_wh6qq")
 
 [node name="Area2D" type="Area2D" parent="Godot" unique_id=837486174]
+visible = false
 position = Vector2(689.86145, 311.7483)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Godot/Area2D" unique_id=2077920699]
@@ -262,6 +264,7 @@ libraries/ = SubResource("AnimationLibrary_wh6qq")
 script = SubResource("GDScript_or1ld")
 
 [node name="Area2D" type="Area2D" parent="Godot2" unique_id=321862836]
+visible = false
 position = Vector2(206.55736, 194.84268)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Godot2/Area2D" unique_id=713960324]
@@ -287,6 +290,7 @@ libraries/ = SubResource("AnimationLibrary_wh6qq")
 script = SubResource("GDScript_jife1")
 
 [node name="Area2D" type="Area2D" parent="Godot3" unique_id=1300618792]
+visible = false
 position = Vector2(216.58441, 440.95978)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Godot3/Area2D" unique_id=136578592]
