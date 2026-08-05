@@ -24,3 +24,5 @@ the microgames included are:
 
 - Smash the bug: smash the bug with the recycling bin by pressing space at the right time!
 
+Special thanks to my family, my teacher, and I guess also to Pixilart, the pixel art editor I created most of my assets in.
+
